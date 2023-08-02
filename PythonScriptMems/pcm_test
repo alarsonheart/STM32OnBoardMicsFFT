@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample PCM data (replace this with your actual PCM_Buffer)
+pcm_data = [4383, 56703, 4557, 56644, 46659, 56765, 4702, 57101, 4612, 57692, 4367]
+
+# Parameters for plotting
+sampling_rate = 48000  # Replace with the actual sampling rate of your audio
+num_samples = len(pcm_data)
+time_axis = np.arange(num_samples) / sampling_rate
+
+# Plot the PCM data as a time-domain waveform
+plt.plot(time_axis, pcm_data)
+plt.xlabel('Time (seconds)')
+plt.ylabel('Amplitude')
+plt.title('PCM Data - Time Domain')
+plt.grid(True)
+plt.show()

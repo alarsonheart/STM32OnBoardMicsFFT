@@ -1,0 +1,10 @@
+usbd_audio_if.c:85:15:Audio_Init	1
+usbd_audio_if.c:105:15:Audio_DeInit	1
+usbd_audio_if.c:118:15:Audio_Record	1
+usbd_audio_if.c:132:15:Audio_VolumeCtl	3
+usbd_audio_if.c:155:15:Audio_MuteCtl	1
+usbd_audio_if.c:166:15:Audio_Stop	1
+usbd_audio_if.c:181:15:Audio_Pause	1
+usbd_audio_if.c:192:15:Audio_Resume	1
+usbd_audio_if.c:203:15:Audio_CommandMgr	1
+usbd_audio_if.c:217:6:Send_Audio_to_USB	1

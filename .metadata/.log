@@ -1,0 +1,38 @@
+!SESSION 2023-08-02 07:45:44.886 -----------------------------------------------
+eclipse.buildId=Version 1.12.1
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\angel\STM32CubeIDE\STWINK2
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-02 07:45:48.489
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-02 07:45:48.496
+!MESSAGE Log4j2 initialized with config file C:\Users\angel\STM32CubeIDE\STWINK2\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-02 07:45:50.468
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-02 07:46:49.620
+!MESSAGE Indexed 'AMicArray_AcousticSL' (41 sources, 170 headers) in 4.03 sec: 19,176 declarations; 90,868 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-02 07:46:51.162
+!MESSAGE Indexed 'AMic_Array' (37 sources, 163 headers) in 1.54 sec: 15,621 declarations; 76,863 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-02 07:46:52.738
+!MESSAGE Indexed 'OnBoardMics' (39 sources, 166 headers) in 1.55 sec: 18,501 declarations; 98,579 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-02 07:46:54.947
+!MESSAGE Indexed 'UltrasoundFFT' (65 sources, 162 headers) in 2.21 sec: 21,519 declarations; 132,145 references; 0 unresolved inclusions; 161 syntax errors; 18 unresolved names (0.012%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-02 07:46:56.866
+!MESSAGE Indexed 'AMicArray_UltrasoundFFT' (67 sources, 163 headers) in 1.88 sec: 22,746 declarations; 134,799 references; 0 unresolved inclusions; 161 syntax errors; 13 unresolved names (0.0083%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-02 08:28:42.113
+!MESSAGE Indexed 'OnBoardMics' (39 sources, 163 headers) in 1.92 sec: 15,849 declarations; 95,707 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb.ui 4 5012 2023-08-02 10:26:23.208
+!MESSAGE Terminate failed
+!SUBENTRY 1 org.eclipse.debug.core 4 5010 2023-08-02 10:26:23.208
+!MESSAGE Terminate failed

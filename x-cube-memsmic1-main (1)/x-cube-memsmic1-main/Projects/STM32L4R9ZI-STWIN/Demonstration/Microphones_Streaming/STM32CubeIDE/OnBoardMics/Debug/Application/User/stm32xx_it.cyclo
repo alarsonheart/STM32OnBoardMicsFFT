@@ -1,0 +1,12 @@
+stm32xx_it.c:59:6:NMI_Handler	1
+stm32xx_it.c:68:6:HardFault_Handler	1
+stm32xx_it.c:81:6:SVC_Handler	1
+stm32xx_it.c:90:6:DebugMon_Handler	1
+stm32xx_it.c:99:6:PendSV_Handler	1
+stm32xx_it.c:108:6:SysTick_Handler	1
+stm32xx_it.c:118:6:OTG_FS_IRQHandler	1
+stm32xx_it.c:123:6:DMA1_Channel1_IRQHandler	1
+stm32xx_it.c:128:6:DMA1_Channel4_IRQHandler	1
+stm32xx_it.c:133:6:DMA1_Channel7_IRQHandler	1
+stm32xx_it.c:139:6:DFSDM1_FLT0_IRQHandler	1
+stm32xx_it.c:144:6:DFSDM1_FLT1_IRQHandler	1
