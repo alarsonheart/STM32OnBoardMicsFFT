@@ -1,20 +1,20 @@
-usbd_audio_in.c:169:17:USBD_AUDIO_Init	2
-usbd_audio_in.c:211:17:USBD_AUDIO_DeInit	2
-usbd_audio_in.c:232:17:USBD_AUDIO_Setup	17
-usbd_audio_in.c:318:18:USBD_AUDIO_GetCfgDesc	1
-usbd_audio_in.c:331:16:USBD_AUDIO_DataIn	8
-usbd_audio_in.c:395:17:USBD_AUDIO_EP0_RxReady	3
-usbd_audio_in.c:420:17:USBD_AUDIO_EP0_TxReady	1
-usbd_audio_in.c:431:17:USBD_AUDIO_SOF	1
-usbd_audio_in.c:444:17:USBD_AUDIO_IsoINIncomplete	1
-usbd_audio_in.c:455:17:USBD_AUDIO_IsoOutIncomplete	1
-usbd_audio_in.c:466:17:USBD_AUDIO_DataOut	1
-usbd_audio_in.c:478:18:USBD_AUDIO_GetDeviceQualifierDesc	1
-usbd_audio_in.c:491:13:AUDIO_REQ_GetMaximum	1
-usbd_audio_in.c:511:13:AUDIO_REQ_GetMinimum	1
-usbd_audio_in.c:530:13:AUDIO_REQ_GetResolution	1
-usbd_audio_in.c:548:13:AUDIO_REQ_GetCurrent	1
-usbd_audio_in.c:568:13:AUDIO_REQ_SetCurrent	2
-usbd_audio_in.c:606:10:USBD_AUDIO_Data_Transfer	9
-usbd_audio_in.c:667:10:USBD_AUDIO_RegisterInterface	2
-usbd_audio_in.c:684:6:USBD_AUDIO_Init_Microphone_Descriptor	9
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:169:17:USBD_AUDIO_Init	2
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:211:17:USBD_AUDIO_DeInit	2
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:232:17:USBD_AUDIO_Setup	17
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:318:18:USBD_AUDIO_GetCfgDesc	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:331:16:USBD_AUDIO_DataIn	8
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:395:17:USBD_AUDIO_EP0_RxReady	3
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:420:17:USBD_AUDIO_EP0_TxReady	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:431:17:USBD_AUDIO_SOF	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:444:17:USBD_AUDIO_IsoINIncomplete	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:455:17:USBD_AUDIO_IsoOutIncomplete	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:466:17:USBD_AUDIO_DataOut	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:478:18:USBD_AUDIO_GetDeviceQualifierDesc	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:491:13:AUDIO_REQ_GetMaximum	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:511:13:AUDIO_REQ_GetMinimum	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:530:13:AUDIO_REQ_GetResolution	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:548:13:AUDIO_REQ_GetCurrent	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:568:13:AUDIO_REQ_SetCurrent	2
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:606:10:USBD_AUDIO_Data_Transfer	9
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:667:10:USBD_AUDIO_RegisterInterface	2
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src/usbd_audio_in.c:684:6:USBD_AUDIO_Init_Microphone_Descriptor	9

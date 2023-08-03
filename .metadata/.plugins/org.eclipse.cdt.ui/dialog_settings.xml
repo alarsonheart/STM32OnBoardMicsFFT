@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="PCD"/>
+			<item value="a"/>
+			<item value="USBD"/>
+			<item value="EP"/>
+			<item value="endpoint"/>
+			<item value="0x80"/>
+			<item value="hUSBDDevice"/>
+			<item value="Init_Acquisition_Peripherals"/>
+			<item value="communication"/>
+			<item value="CDC"/>
+			<item value="virtual"/>
+			<item value="PCD_HandleTypeDefhpcd"/>
+			<item value="hpcd"/>
+			<item value="usbd_conf"/>
+			<item value="usb"/>
+		</list>
+	</section>
+</section>

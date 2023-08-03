@@ -1,19 +1,19 @@
-syscalls.c:48:6:initialise_monitor_handles	1
-syscalls.c:52:5:_getpid	1
-syscalls.c:57:5:_kill	1
-syscalls.c:63:6:_exit	1
-syscalls.c:69:27:_read	2
-syscalls.c:81:27:_write	2
-syscalls.c:92:9:_sbrk	3
-syscalls.c:117:5:_close	1
-syscalls.c:123:5:_fstat	1
-syscalls.c:129:5:_isatty	1
-syscalls.c:134:5:_lseek	1
-syscalls.c:139:5:_open	1
-syscalls.c:145:5:_wait	1
-syscalls.c:151:5:_unlink	1
-syscalls.c:157:5:_times	1
-syscalls.c:162:5:_stat	1
-syscalls.c:168:5:_link	1
-syscalls.c:174:5:_fork	1
-syscalls.c:180:5:_execve	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:48:6:initialise_monitor_handles	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:52:5:_getpid	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:57:5:_kill	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:63:6:_exit	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:69:27:_read	2
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:81:27:_write	2
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:92:9:_sbrk	3
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:117:5:_close	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:123:5:_fstat	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:129:5:_isatty	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:134:5:_lseek	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:139:5:_open	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:145:5:_wait	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:151:5:_unlink	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:157:5:_times	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:162:5:_stat	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:168:5:_link	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:174:5:_fork	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/STM32CubeIDE/syscalls.c:180:5:_execve	1

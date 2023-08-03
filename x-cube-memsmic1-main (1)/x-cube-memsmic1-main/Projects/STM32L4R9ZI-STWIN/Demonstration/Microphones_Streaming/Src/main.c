@@ -44,6 +44,7 @@
   * @{
   */
 USBD_HandleTypeDef hUSBDDevice;
+USBD_HandleTypeDef fftOut;
 extern USBD_AUDIO_ItfTypeDef  USBD_AUDIO_fops;
 SAI_HandleTypeDef            SaiHandle;
 DMA_HandleTypeDef            hSaiDma;
@@ -75,6 +76,11 @@ int main(void)
   - Global MSP (MCU Support Package) initialization
   */
   HAL_Init();
+
+  USBD_LL_Init(&fftOut);
+  USBD_LL_Start(&fftOut);
+  USBD_LL_OpenEP(&fftOut, 0x80U, USBD_EP_TYPE_BULK, 64);
+
 
   /* Enable Power Clock*/
   __HAL_RCC_PWR_CLK_ENABLE();

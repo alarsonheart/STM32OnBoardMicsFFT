@@ -30,6 +30,8 @@
 float32_t fftInput[FFT_SIZE]; // Buffer for the FFT input data
 float32_t fftOutput[FFT_SIZE];
 float32_t fftMagnitude[FFT_SIZE/2];
+extern USBD_HandleTypeDef fftOut; // Declaration of the external variable
+
 
 /** @addtogroup X_CUBE_MEMSMIC1_Applications
   * @{
@@ -107,6 +109,7 @@ void BSP_AUDIO_IN_TransferComplete_CallBack(uint32_t Instance)
 
 void AudioProcess(void)
 {
+
 	// Copy the required samples from PCM_Buffer to fftInput (size 64)
 	  for (int i = 0; i < FFT_SIZE; i++) {
 	    if (i < 64) {
@@ -122,10 +125,10 @@ void AudioProcess(void)
 	  arm_rfft_fast_f32(&fft, fftInput, fftOutput, 0);
 	  arm_cmplx_mag_f32(fftOutput, fftMagnitude, FFT_SIZE / 2);
 
-
+	  USBD_LL_Transmit(&fftOut, 0x80U, (uint8_t*)fftOutput, 64);
 	  // Send the processed FFT data to USB
-	  Send_Audio_to_USB((int16_t *)fftOutput, FFT_SIZE);
-//  Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000)*AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
+//	  Send_Audio_to_USB((int16_t *)fftOutput, FFT_SIZE); //I do not know why this messes up my recording in Audacity
+  Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000)*AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
 }
 
 /**

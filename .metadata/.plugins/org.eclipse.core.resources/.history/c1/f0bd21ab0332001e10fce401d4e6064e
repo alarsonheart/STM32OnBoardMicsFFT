@@ -21,6 +21,15 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "audio_application.h"
+#include "arm_math.h"
+
+#define FFT_SIZE 64
+#define BUFFER_SIZE ((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY) / 1000) * N_MS_PER_INTERRUPT
+
+// Buffer to store the result of the FFT
+float32_t fftInput[FFT_SIZE]; // Buffer for the FFT input data
+float32_t fftOutput[FFT_SIZE];
+float32_t fftMagnitude[FFT_SIZE/2];
 
 /** @addtogroup X_CUBE_MEMSMIC1_Applications
   * @{
@@ -65,6 +74,9 @@ uint16_t PCM_Buffer[((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY) / 1000)  
   * @param  None
   * @retval None
   */
+
+
+
 void BSP_AUDIO_IN_HalfTransfer_CallBack(uint32_t Instance)
 {
   UNUSED(Instance);
@@ -95,6 +107,29 @@ void BSP_AUDIO_IN_TransferComplete_CallBack(uint32_t Instance)
 
 void AudioProcess(void)
 {
+	  USBD_LL_Init(&fftOut);
+	  USBD_LL_Start(&fftOut);
+	  USBD_LL_OpenEP(&fftOut, 0x80U, USBD_EP_TYPE_BULK, 64);
+	  uint8_t txBuffer[64];
+	  USBD_LL_Transmit(&fftOut, 0x80U, txBuffer, 64);
+	// Copy the required samples from PCM_Buffer to fftInput (size 64)
+	  for (int i = 0; i < FFT_SIZE; i++) {
+	    if (i < 64) {
+	      fftInput[i] = (float32_t)PCM_Buffer[i]; // Convert the PCM_Buffer data to float for the FFT
+	    } else {
+	      fftInput[i] = 0.0f; // Zero-pad the remaining elements of fftInput
+	    }
+	  }
+
+	  // Perform the FFT on the fftInput buffer
+	  arm_rfft_fast_instance_f32 fft;
+	  arm_rfft_fast_init_f32(&fft, FFT_SIZE);
+	  arm_rfft_fast_f32(&fft, fftInput, fftOutput, 0);
+	  arm_cmplx_mag_f32(fftOutput, fftMagnitude, FFT_SIZE / 2);
+
+
+	  // Send the processed FFT data to USB
+//	  Send_Audio_to_USB((int16_t *)fftOutput, FFT_SIZE); //I do not know why this messes up my recording in Audacity
   Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000)*AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
 }
 
