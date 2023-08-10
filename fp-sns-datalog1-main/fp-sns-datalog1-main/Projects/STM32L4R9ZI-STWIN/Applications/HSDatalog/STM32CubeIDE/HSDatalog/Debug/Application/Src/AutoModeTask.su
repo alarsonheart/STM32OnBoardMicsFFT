@@ -1,0 +1,12 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:708:13:AMTaskIdleTimerCallback	16	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:721:13:AMStopDatalogEPCallback	16	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:590:25:AMTaskStartExecutionPhase.part.0.isra	24	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:439:13:AMTaskRun	64	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:253:9:AMTaskAlloc	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:267:18:AMTaskInit	24	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:316:18:AMTaskOnNewConfiguration	16	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:345:18:AMTaskAbortAutoMode	16	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:385:11:AMTaskIsStarted	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:392:11:AMTaskIsNotStarted	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:399:11:AMTaskIsEnded	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/AutoModeTask.c:406:18:AMTaskStartExecutioPlan	16	static

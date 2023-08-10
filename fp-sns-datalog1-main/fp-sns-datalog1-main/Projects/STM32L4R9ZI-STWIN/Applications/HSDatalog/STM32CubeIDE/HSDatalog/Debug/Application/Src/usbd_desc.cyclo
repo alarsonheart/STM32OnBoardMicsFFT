@@ -1,0 +1,7 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_desc.c:125:10:USBD_WCID_STREAMING_DeviceDescriptor	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_desc.c:137:10:USBD_WCID_STREAMING_LangIDStrDescriptor	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_desc.c:149:10:USBD_WCID_STREAMING_ProductStrDescriptor	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_desc.c:161:10:USBD_WCID_STREAMING_ManufacturerStrDescriptor	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_desc.c:189:10:USBD_WCID_STREAMING_ConfigStrDescriptor	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_desc.c:201:10:USBD_WCID_STREAMING_InterfaceStrDescriptor	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_desc.c:173:10:USBD_WCID_STREAMING_SerialStrDescriptor	14

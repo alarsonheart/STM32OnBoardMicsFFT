@@ -1,0 +1,6 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/OTA.c:61:8:UpdateFWBlueMS	80	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/OTA.c:189:6:StartUpdateFWBlueMS	40	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/OTA.c:241:6:OTA_Verify_Current_Active_Bank	48	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/OTA.c:268:6:EnableDisableDualBoot	48	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/OTA.c:331:6:HAL_CRC_MspInit	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/OTA.c:344:6:HAL_CRC_MspDeInit	0	static

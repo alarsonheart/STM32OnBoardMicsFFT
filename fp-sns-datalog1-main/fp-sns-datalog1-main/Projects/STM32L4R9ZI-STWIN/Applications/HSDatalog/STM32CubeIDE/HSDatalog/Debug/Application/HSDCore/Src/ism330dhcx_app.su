@@ -1,0 +1,15 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1040:13:ISM330DHCX_MLC_Int_Callback	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1047:13:ISM330DHCX_Int_Callback	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:130:6:ISM330DHCX_Peripheral_Init	56	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:175:6:ISM330DHCX_OS_Init	40	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:431:6:ISM330DHCX_sendCMD	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:704:9:ISM330DHCX_updateConfig	24	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1013:9:ISM330DHCX_GetUCF_FromBuffer	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1053:6:ISM330DHCX_Set_State	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1058:6:ISM330DHCX_Start	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1064:6:ISM330DHCX_SetUCF	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1072:6:ISM330DHCX_Stop	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1078:13:ISM330DHCX_Data_Ready	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:195:13:ISM330DHCX_Thread	56	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1088:9:ISM330DHCX_Get_Id	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/ism330dhcx_app.c:1098:9:ISM330DHCX_Create_Sensor	40	static

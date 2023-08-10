@@ -1,6 +1,7 @@
-C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:82:6:BSP_AUDIO_IN_HalfTransfer_CallBack	1
-C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:94:6:BSP_AUDIO_IN_TransferComplete_CallBack	1
-C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:110:6:AudioProcess	3
-C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:142:6:Init_Acquisition_Peripherals	2
-C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:164:6:Start_Acquisition	2
-C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:174:6:Error_Handler	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:101:6:BSP_AUDIO_IN_HalfTransfer_CallBack	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:113:6:BSP_AUDIO_IN_TransferComplete_CallBack	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:129:6:AudioProcess	1
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:135:6:Perform_FFT	8
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:214:6:Init_Acquisition_Peripherals	2
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:236:6:Start_Acquisition	5
+C:/Users/angel/STM32CubeIDE/STWINK2/x-cube-memsmic1-main (1)/x-cube-memsmic1-main/Projects/STM32L4R9ZI-STWIN/Demonstration/Microphones_Streaming/Src/audio_application.c:265:6:Error_Handler	1

@@ -1,0 +1,256 @@
+/**
+  ******************************************************************************
+  * @file    audio_application.c
+  * @author  SRA
+  * @version v1.3.1
+  * @date    17-Jul-2020
+  * @brief   Audio  application.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2022 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  *
+  ******************************************************************************
+  */
+
+/* Includes ------------------------------------------------------------------*/
+#include "audio_application.h"
+#include "arm_math.h"
+#include "stdio.h"
+#define FFT_SIZE 64
+#define BUFFER_SIZE ((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY) / 1000) * N_MS_PER_INTERRUPT
+
+// Buffer to store the result of the FFT
+float32_t fftInput[FFT_SIZE]; // Buffer for the FFT input data
+float32_t fftOutput[FFT_SIZE];
+float32_t fftMagnitude[FFT_SIZE/2];
+//extern USBD_HandleTypeDef fftOut; // Declaration of the external variable
+
+
+/** @addtogroup X_CUBE_MEMSMIC1_Applications
+  * @{
+  */
+
+/** @addtogroup Microphones_Acquisition
+  * @{
+  */
+
+/** @defgroup AUDIO_APPLICATION
+  * @{
+  */
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+
+/** @defgroup AUDIO_APPLICATION_Exported_Variables
+  * @{
+  */
+BSP_AUDIO_Init_t MicParams;
+uint16_t PCM_Buffer[((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY) / 1000)  * N_MS_PER_INTERRUPT ];
+
+/**
+  * @}
+  */
+
+/** @defgroup AUDIO_APPLICATION_Private_Variables
+  * @{
+  */
+/* Private variables ---------------------------------------------------------*/
+/**
+  * @}
+  */
+
+/** @defgroup AUDIO_APPLICATION_Exported_Function
+  * @{
+  */
+
+/**
+  * @brief  Half Transfer user callback, called by BSP functions.
+  * @param  None
+  * @retval None
+  */
+// Function to convert MSB and LSB to a signed 16-bit integer
+int16_t combineMsbLsb(uint16_t msb, uint16_t lsb) {
+    uint16_t combined = (msb << 8) | lsb;
+    int16_t signedValue = (int16_t)combined;
+    return signedValue;
+}
+
+
+
+void BSP_AUDIO_IN_HalfTransfer_CallBack(uint32_t Instance)
+{
+  UNUSED(Instance);
+  AudioProcess();
+  BSP_LED_Off(LED1);
+}
+
+/**
+  * @brief  Transfer Complete user callback, called by BSP functions.
+  * @param  None
+  * @retval None
+  */
+void BSP_AUDIO_IN_TransferComplete_CallBack(uint32_t Instance)
+{
+  UNUSED(Instance);
+  AudioProcess();
+  BSP_LED_On(LED1);
+}
+
+/**
+  * @brief  User function that is called when 1 ms of PDM data is available.
+  *       In this application only PDM to PCM conversion and USB streaming
+  *                  is performed.
+  *       User can add his own code here to perform some DSP or audio analysis.
+  * @param  none
+  * @retval None
+  */
+void AudioProcess(void)
+{
+    // Perform the FFT on the PCM_Buffer data
+    arm_rfft_instance_q15 fft;
+    arm_rfft_init_q15(&fft, FFT_SIZE, 0, 1);
+    arm_rfft_q15(&fft, (q15_t *)PCM_Buffer, fftOutput);
+
+    // Convert PCM_Buffer from int16_t to q15_t
+    q15_t q15_PCM_Buffer[FFT_SIZE];
+    for (int i = 0; i < FFT_SIZE; i++) {
+        q15_PCM_Buffer[i] = (q15_t)PCM_Buffer[i];
+    }
+
+    // Process the FFT
+    arm_rfft_q15(&fft, q15_PCM_Buffer, fftOutput);
+
+    // Calculate the magnitude of the FFT output
+    arm_cmplx_mag_q15(fftOutput, (q15_t *)fftMagnitude, FFT_SIZE / 2);
+
+    // Find the index of the maximum value in the fftMagnitude array
+    uint16_t maxIndex = 0;
+    q15_t maxValue = fftMagnitude[0];
+    for (uint16_t i = 1; i < FFT_SIZE / 2; i++) {
+        if (fftMagnitude[i] > maxValue) {
+            maxValue = fftMagnitude[i];
+            maxIndex = i;
+        }
+    }
+
+    // Calculate the corresponding frequency of the peak in Hz
+    float32_t frequencyResolution = (float32_t)AUDIO_IN_SAMPLING_FREQUENCY / (float32_t)FFT_SIZE;
+    float32_t peakFrequency = (float32_t)maxIndex * frequencyResolution;
+
+
+    // Send the processed FFT data to USB
+    Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000) * AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
+}
+
+//void AudioProcess(void)
+//{
+//    for (int i = 0; i < FFT_SIZE; i++) {
+//        uint16_t msb = PCM_Buffer[2 * i];
+//        uint16_t lsb = PCM_Buffer[2 * i + 1];
+//        fftInput[i] = (float32_t)combineMsbLsb(msb, lsb); // Convert the PCM_Buffer data to float for the FFT
+//    }
+//
+////	// Copy the required samples from PCM_Buffer to fftInput (size 64)
+////	  for (int i = 0; i < FFT_SIZE; i++) {
+////	    if (i < 64) {
+////	      fftInput[i] = (float32_t)PCM_Buffer[i]; // Convert the PCM_Buffer data to float for the FFT
+////	    } else {
+////	      fftInput[i] = 0.0f; // Zero-pad the remaining elements of fftInput
+////	    }
+////	  }
+//
+//	  // Perform the FFT on the fftInput buffer
+//	  arm_rfft_fast_instance_f32 fft;
+//	  arm_rfft_fast_init_f32(&fft, FFT_SIZE);
+//	  arm_rfft_fast_f32(&fft, fftInput, fftOutput, 0);
+//	  arm_cmplx_mag_f32(fftOutput, fftMagnitude, FFT_SIZE / 2);
+//	  // Calculate the frequency resolution in Hz
+//	  float32_t frequencyResolution = (float32_t)AUDIO_IN_SAMPLING_FREQUENCY / (float32_t)FFT_SIZE;
+//	  // Find the index of the maximum value in the fftMagnitude array
+//	  uint16_t maxIndex = 0;
+//	  float32_t maxValue = fftMagnitude[0];
+//	  for (uint16_t i = 1; i < FFT_SIZE / 2; i++) {
+//	      if (fftMagnitude[i] > maxValue) {
+//	          maxValue = fftMagnitude[i];
+//	          maxIndex = i;
+//	      }
+//	  }
+//
+//	  // Calculate the corresponding frequency of the peak in Hz
+//	  float32_t peakFrequency = (float32_t)maxIndex * frequencyResolution;
+//
+//
+////	  USBD_LL_Transmit(&fftOut, 0x80U, (uint8_t*)fftOutput, 64); // this fucks it up too since using same USB
+//	  // Send the processed FFT data to USB
+//  Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000)*AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
+//}
+
+/**
+  * @brief  User function that is called when 1 ms of PDM data is available.
+  *       In this application only PDM to PCM conversion and USB streaming
+  *                  is performed.
+  *       User can add his own code here to perform some DSP or audio analysis.
+  * @param  none
+  * @retval None
+  */
+void Init_Acquisition_Peripherals(uint32_t AudioFreq, uint32_t Device, uint32_t ChnlNbr)
+{
+  MicParams.BitsPerSample = 16;
+  MicParams.ChannelsNbr = ChnlNbr;
+  MicParams.Device = Device;
+  MicParams.SampleRate = AudioFreq;
+  MicParams.Volume = AUDIO_VOLUME_INPUT;
+
+   if (BSP_AUDIO_IN_Init(BSP_AUDIO_IN_INSTANCE, &MicParams) != BSP_ERROR_NONE)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief  User function that is called when 1 ms of PDM data is available.
+  *       In this application only PDM to PCM conversion and USB streaming
+  *                  is performed.
+  *       User can add his own code here to perform some DSP or audio analysis.
+  * @param  none
+  * @retval None
+  */
+void Start_Acquisition(void)
+{
+  if (BSP_AUDIO_IN_Record(BSP_AUDIO_IN_INSTANCE, (uint8_t *) PCM_Buffer, DEFAULT_AUDIO_IN_BUFFER_SIZE) != BSP_ERROR_NONE)
+  {
+    Error_Handler();
+  }
+}
+
+
+
+void Error_Handler(void)
+{
+  while (1);
+}
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+

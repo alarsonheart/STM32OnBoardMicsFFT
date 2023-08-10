@@ -1,0 +1,6 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_wcid_interface.c:289:15:WCID_STREAMING_Itf_Receive	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_wcid_interface.c:106:15:WCID_STREAMING_Itf_DeInit	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_wcid_interface.c:83:15:WCID_STREAMING_Itf_Init	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_wcid_interface.c:472:17:WCID_STREAMING_Itf_ParseSetRequest.isra	3368	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_wcid_interface.c:128:15:WCID_STREAMING_Itf_Control	56	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/Src/usbd_wcid_interface.c:602:6:WCID_CalculateUsbWriteBufferSize	0	static

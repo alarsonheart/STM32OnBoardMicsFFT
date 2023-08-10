@@ -1,10 +1,10 @@
-09:30:30 **** Incremental Build of configuration Debug for project OnBoardMics ****
+09:09:24 **** Incremental Build of configuration Debug for project OnBoardMics ****
 make -j16 all 
 arm-none-eabi-size   OnBoardMics.elf 
    text	   data	    bss	    dec	    hex	filename
- 131440	    280	  22936	 154656	  25c20	OnBoardMics.elf
+ 131768	    280	  27992	 160040	  27128	OnBoardMics.elf
 Finished building: default.size.stdout
  
 
-09:30:30 Build Finished. 0 errors, 0 warnings. (took 249ms)
+09:09:24 Build Finished. 0 errors, 0 warnings. (took 248ms)
 

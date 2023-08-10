@@ -44,7 +44,7 @@
   * @{
   */
 USBD_HandleTypeDef hUSBDDevice;
-USBD_HandleTypeDef fftOut;
+//USBD_HandleTypeDef fftOut;
 extern USBD_AUDIO_ItfTypeDef  USBD_AUDIO_fops;
 SAI_HandleTypeDef            SaiHandle;
 DMA_HandleTypeDef            hSaiDma;
@@ -77,9 +77,9 @@ int main(void)
   */
   HAL_Init();
 
-  USBD_LL_Init(&fftOut);
-  USBD_LL_Start(&fftOut);
-  USBD_LL_OpenEP(&fftOut, 0x80U, USBD_EP_TYPE_BULK, 64);
+//  USBD_LL_Init(&fftOut);
+//  USBD_LL_Start(&fftOut);
+//  USBD_LL_OpenEP(&fftOut, 0x80U, USBD_EP_TYPE_BULK, 64);
 
 
   /* Enable Power Clock*/
@@ -111,7 +111,6 @@ int main(void)
 #ifdef DISABLE_USB_DRIVEN_ACQUISITION
   Init_Acquisition_Peripherals(AUDIO_IN_SAMPLING_FREQUENCY, ACTIVE_MICROPHONES_MASK, AUDIO_IN_CHANNELS);
   Start_Acquisition();
-//  HAL_Delay(5000);
 #endif
 
   while (1)

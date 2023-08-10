@@ -9,6 +9,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\angel\STM32CubeIDE\STWINKOG\x-cube-memsmic1-main_8_8_2023\x-cube-memsmic1-main\Projects\STM32L4R9ZI-STWIN"/>
+			<item value="C:\Users\angel\STM32CubeIDE\STWINK2\x-cube-memsmic1-main_8_8_2023\x-cube-memsmic1-main\Projects\STM32L4R9ZI-STWIN\Demonstration"/>
+			<item value="C:\Users\angel\STM32CubeIDE\STWINK2\x-cube-memsmic1-main_8_8_2023\x-cube-memsmic1-main\Projects\STM32L4R9ZI-STWIN"/>
+			<item value="C:\Users\angel\STM32CubeIDE\STWINK2\fp-sns-datalog1-main\fp-sns-datalog1-main\Projects\STM32L4R9ZI-STWIN"/>
 			<item value="C:\Users\angel\STM32CubeIDE\STWINK2\x-cube-memsmic1-main (1)\x-cube-memsmic1-main\Projects\STM32L4R9ZI-STWIN"/>
 			<item value="C:\Users\angel\STM32Cube\en.x-cube-memsmic1\STM32CubeExpansion_MEMSMIC1_V5.7.0\Projects\STM32L4R9ZI-STWIN"/>
 		</list>

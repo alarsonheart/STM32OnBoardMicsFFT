@@ -22,15 +22,34 @@
 /* Includes ------------------------------------------------------------------*/
 #include "audio_application.h"
 #include "arm_math.h"
-
+#include "stdio.h"
 #define FFT_SIZE 64
 #define BUFFER_SIZE ((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY) / 1000) * N_MS_PER_INTERRUPT
+#define NUM_PEAKS 3 // Number of peaks to find
+#define NUM_FREQUENCIES (FFT_SIZE / 2)
 
+#define FFT_BUFFER_SIZE 512
+float32_t fftInput[FFT_BUFFER_SIZE];
+float32_t fftOutput[FFT_BUFFER_SIZE];
+float32_t fftMagnitude[FFT_BUFFER_SIZE/2];
+float32_t fft_frequency[FFT_BUFFER_SIZE / 2];
+
+uint16_t fftBufferIndex = 0;
+
+
+typedef struct {
+	float32_t bin_width;
+	float32_t strength;
+} FrequencyData;
+FrequencyData strength_buffer[NUM_FREQUENCIES];
+//float32_t fft_frequency[FFT_SIZE / 2];
+uint32_t peak_indices[NUM_PEAKS];
+float32_t peak_frequencies[NUM_PEAKS];
 // Buffer to store the result of the FFT
-float32_t fftInput[FFT_SIZE]; // Buffer for the FFT input data
-float32_t fftOutput[FFT_SIZE];
-float32_t fftMagnitude[FFT_SIZE/2];
-extern USBD_HandleTypeDef fftOut; // Declaration of the external variable
+//float32_t fftInput[FFT_SIZE]; // Buffer for the FFT input data
+//float32_t fftOutput[FFT_SIZE];
+//float32_t fftMagnitude[FFT_SIZE/2];
+//extern USBD_HandleTypeDef fftOut; // Declaration of the external variable
 
 
 /** @addtogroup X_CUBE_MEMSMIC1_Applications
@@ -82,7 +101,7 @@ uint16_t PCM_Buffer[((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY) / 1000)  
 void BSP_AUDIO_IN_HalfTransfer_CallBack(uint32_t Instance)
 {
   UNUSED(Instance);
-  AudioProcess();
+//  AudioProcess();
   BSP_LED_Off(LED1);
 }
 
@@ -109,26 +128,79 @@ void BSP_AUDIO_IN_TransferComplete_CallBack(uint32_t Instance)
 
 void AudioProcess(void)
 {
+    // Send the processed FFT data to USB (you can remove this if not needed)
+     Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000) * AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
+}
 
-	// Copy the required samples from PCM_Buffer to fftInput (size 64)
-	  for (int i = 0; i < FFT_SIZE; i++) {
-	    if (i < 64) {
-	      fftInput[i] = (float32_t)PCM_Buffer[i]; // Convert the PCM_Buffer data to float for the FFT
-	    } else {
-	      fftInput[i] = 0.0f; // Zero-pad the remaining elements of fftInput
-	    }
-	  }
+void Perform_FFT(void){
+//    // Convert 16-bit PCM data to float and store in fftInput buffer
+//	for (int i = 0; i < FFT_SIZE; i++)
+//	{
+//	    if (i < BUFFER_SIZE/2) // Use half the BUFFER_SIZE to account for interleaved channels
+//	    {
+//	        // Convert 16-bit signed integer PCM data to float for the FFT
+//	        float32_t left_sample = (float32_t)PCM_Buffer[i * 2] * 1.0f;
+//	        float32_t right_sample = (float32_t)PCM_Buffer[i * 2 + 1] * 1.0f;
+//	        fftInput[i] = left_sample + right_sample; // Sum left and right samples
+//	    }
+//	    else
+//	    {
+//	        // Zero-pad the remaining elements of fftInput
+//	        fftInput[i] = 0.0f;
+//	    }
+//	}
+//
+//    // Perform the FFT on the fftInput buffer
+    arm_rfft_fast_instance_f32 fft;
+    arm_rfft_fast_init_f32(&fft, FFT_SIZE);
+    arm_rfft_fast_f32(&fft, fftInput, fftOutput, 0);
 
-	  // Perform the FFT on the fftInput buffer
-	  arm_rfft_fast_instance_f32 fft;
-	  arm_rfft_fast_init_f32(&fft, FFT_SIZE);
-	  arm_rfft_fast_f32(&fft, fftInput, fftOutput, 0);
-	  arm_cmplx_mag_f32(fftOutput, fftMagnitude, FFT_SIZE / 2);
+    // Compute the magnitude spectrum (only the first half since it's symmetric)
+    arm_cmplx_mag_f32(fftOutput, fftMagnitude, FFT_SIZE / 2);
 
-	  USBD_LL_Transmit(&fftOut, 0x80U, (uint8_t*)fftOutput, 64);
-	  // Send the processed FFT data to USB
-//	  Send_Audio_to_USB((int16_t *)fftOutput, FFT_SIZE); //I do not know why this messes up my recording in Audacity
-  Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000)*AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
+    float32_t sampling_rate = 48000.0f; // Replace 48000.0f with the actual sampling rate if needed
+    float32_t bin_width = sampling_rate / FFT_SIZE;
+
+    // Fill the strength_buffer with frequency data and corresponding strengths
+    for (int i = 0; i < FFT_SIZE / 2; i++)
+    {
+        strength_buffer[i].bin_width = i * bin_width;
+        strength_buffer[i].strength = fftMagnitude[i];
+    }
+
+    // Find the indices of the largest peaks
+    for (int i = 0; i < NUM_PEAKS; i++)
+    {
+        float32_t max_magnitude = -1.0f;
+        uint32_t max_index = 0;
+
+        for (int j = 0; j < FFT_SIZE / 2; j++)
+        {
+            if (strength_buffer[j].strength > max_magnitude)
+            {
+                // Check if the index is already selected
+                int found = 0;
+                for (int k = 0; k < i; k++)
+                {
+                    if (peak_indices[k] == j)
+                    {
+                        found = 1;
+                        break;
+                    }
+                }
+
+                if (!found)
+                {
+                    max_magnitude = strength_buffer[j].strength;
+                    max_index = j;
+                }
+            }
+        }
+
+        peak_indices[i] = max_index;
+        peak_frequencies[i] = strength_buffer[max_index].bin_width;
+    }
+
 }
 
 /**
@@ -167,7 +239,26 @@ void Start_Acquisition(void)
   {
     Error_Handler();
   }
-}
+  // Accumulate PCM data into the FFT buffer
+    for (int i = 0; i < DEFAULT_AUDIO_IN_BUFFER_SIZE / 2; i++)
+    {
+      if (fftBufferIndex < FFT_BUFFER_SIZE)
+      {
+        float32_t left_sample = (float32_t)PCM_Buffer[i * 2] * 1.0f;
+        float32_t right_sample = (float32_t)PCM_Buffer[i * 2 + 1] * 1.0f;
+        fftInput[fftBufferIndex] = left_sample + right_sample; // Sum left and right samples
+        fftBufferIndex++;
+      }
+    }
+
+    // If the FFT buffer is filled, perform the FFT
+    if (fftBufferIndex >= FFT_BUFFER_SIZE)
+    {
+      Perform_FFT(); // Call a function to perform the FFT on the fftInput buffer
+      fftBufferIndex = 0; // Reset the index for the next iteration
+    }
+  }
+
 
 
 
