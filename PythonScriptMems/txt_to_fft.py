@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 # pcm_data =[32760, 43171, 32760, 32776, 30080, 32776, 61363, 39882, 32776, 5508, 32776, 29547, 32776, 32760, 42265, 32760, 11136, 23043, 32760, 57270, 32760, 35259, 32760, 32776, 16212, 32776, 48731, 51990, 32776, 16080, 32776, 32760, 32776, 32760, 56285, 32760, 22885, 9820, 32760, 47185, 32760, 32776, 32760, 32776, 2176, 34175, 37112, 64677, 32776, 25155, 32776, 32760, 34912, 32760, 5272, 28984, 32760, 62733, 32760, 38690, 32760, 32776, 23488, 32776, 55348, 45232, 32776, 10353, 32776, 32457, 32776, 32760, 50010, 32760, 17680, 15502, 32760, 51266, 32760, 32776, 32760, 32776, 9451, 32776, 43237, 57910, 32776, 20165, 32776, 32760, 32776, 32760, 63748, 32760, 28709, 2607]
 
 '''This is data taken from a 1kHz tone playing'''
-pcm_data = [2929, 64084, 5369, 62593, 7936, 60739, 10522, 58706, 13067, 56700, 15480, 54864, 17662, 53241, 19634, 51816, 21256, 50619, 22436, 49644, 23223, 49030, 23325, 48774, 21876, 48989, 18789, 50098, 15511, 52303, 13022, 54602, 10887, 56564, 8637, 58345, 6262, 59854, 4133, 61211, 2427, 62632, 948, 64036, 65054, 65264, 63371, 788, 61204, 1880, 58768, 3345, 56168, 5158, 53527, 7160, 50951, 9165, 48541, 11012, 46351, 12658, 44354, 14086, 42669, 15339, 41438, 16326, 40623, 17020, 40571, 17368, 42163, 17190, 45381, 15982, 48654, 13725, 51204, 11424, 53494, 9398, 55904, 7532, 58355, 5947, 60483, 4517, 62156, 3058, 63549, 1718, 64967, 575, 1161, 65135]
+# pcm_data = [2929, 64084, 5369, 62593, 7936, 60739, 10522, 58706, 13067, 56700, 15480, 54864, 17662, 53241, 19634, 51816, 21256, 50619, 22436, 49644, 23223, 49030, 23325, 48774, 21876, 48989, 18789, 50098, 15511, 52303, 13022, 54602, 10887, 56564, 8637, 58345, 6262, 59854, 4133, 61211, 2427, 62632, 948, 64036, 65054, 65264, 63371, 788, 61204, 1880, 58768, 3345, 56168, 5158, 53527, 7160, 50951, 9165, 48541, 11012, 46351, 12658, 44354, 14086, 42669, 15339, 41438, 16326, 40623, 17020, 40571, 17368, 42163, 17190, 45381, 15982, 48654, 13725, 51204, 11424, 53494, 9398, 55904, 7532, 58355, 5947, 60483, 4517, 62156, 3058, 63549, 1718, 64967, 575, 1161, 65135]
 
 '''This is data taken from a 15kHz tone playing'''
 # pcm_data = [60574, 61352, 4946, 2032, 681, 2401, 59567, 61430, 3434, 496, 2891, 3513, 59423, 62122, 1299, 64404, 4595, 4038, 60140, 63306, 64473, 62977, 5566, 3967, 61727, 64845, 62303, 61924, 5678, 3273, 63762, 946, 60472, 61380, 4879, 2075, 590, 2448, 59457, 61485, 3297, 566, 2786, 3573, 59325, 62184, 1219, 64475, 4539, 4122, 60127, 63371, 64469, 63043, 5573, 4001, 61698, 64878, 62248, 61949, 5678, 3305, 63809, 972, 60547, 61436, 4945, 2103, 613, 2459, 59513, 61496, 3382, 526, 2852, 3545, 59377, 62167, 1265, 64465, 4605, 4075, 60211, 63335, 64539, 63011, 5656, 3986, 61816, 64855, 62352, 61929, 5799, 3264, 63935, 939]
@@ -58,36 +58,53 @@ pcm_data = [2929, 64084, 5369, 62593, 7936, 60739, 10522, 58706, 13067, 56700, 1
 #     -757, -1243, -1769, -2342, -2950, -3565, -4101, -4459, -4736, -4879, -4837,
 #     -4542, -4068, -3520]
 
+
+pcm_data = [62014, 62301, 62585, 62881, 63193, 63500, 63797, 64089, 64392, 64697, 64979, 65288, 79, 407, 738, 1044, 1343, 1633, 1931, 2245, 2570, 2870, 3156, 3444, 3716, 3982, 4261, 4541, 4811, 5066, 5342, 5601, 5833, 6071, 6310, 6534, 6763, 6994, 7215, 7414, 7599, 7766, 7939, 8109, 8259, 8426, 8580, 8714, 8845, 8968, 9075, 9143, 9192, 9268, 9361, 9405, 9446, 9508, 9529, 9527, 9520, 9518, 9513, 9501, 9485, 9447, 9398, 9324, 9233, 9140, 9064, 8972, 8865, 8768, 8656, 8493, 8311, 8137, 7975, 7820, 7657, 7484, 7287, 7068, 6846, 6615, 6389, 6160, 5919, 5648, 5371, 5110, 4848, 4568, 4313, 4040, 3735, 3431, 3132, 2837, 2527, 2213, 1898, 1584, 1288, 985, 650, 325, 19, 65232, 64913, 64622, 64334, 64013, 63674, 63358, 63052, 62739, 62457, 62192, 61912, 61607, 61300, 61004, 60738, 60495, 60252, 59994, 59738, 59492, 59255, 59027, 58824, 58612, 58388, 58189, 58022, 57837, 57660, 57501, 57336, 57171, 57028, 56926, 56824, 56719, 56619, 56508, 56409, 56329, 56258, 56222, 56210, 56192, 56165, 56144, 56149, 56130, 56117, 56152, 56210, 56265, 56330, 56398, 56479, 56558, 56643, 56746, 56861, 57007, 57154, 57276, 57414, 57600, 57781, 57941, 58112, 58317, 58517, 58718, 58947, 59183, 59420, 59645, 59869, 60113, 60384, 60649, 60912, 61185, 61464, 61748]
 left_channel = pcm_data[::2]
 right_channel = pcm_data[1::2]
-
-print(f" length + {len(pcm_data)}")
-print(f" length 1 + {len(right_channel)}")
-print(f" length 2 + {len(left_channel)}")
 combined_channel = np.add(left_channel, right_channel)
 
-print(f" length 3 + {len(combined_channel)}")
+# Perform FFT
 fft_result = np.fft.fft(combined_channel)
 magnitude_spectrum = np.abs(fft_result)
 
-# Calculate the corresponding frequencies for the spectrum
-sampling_frequency = 48000  # Replace with the actual sampling frequency of your audio (e.g., 48000 Hz)
+# Calculate corresponding frequencies for the spectrum
+sampling_frequency = 192000
 frequencies = np.fft.fftfreq(len(magnitude_spectrum), d=1.0/sampling_frequency)
 
-# Find the indices of the top 3 peaks
-num_peaks = 3
-peak_indices = np.argpartition(magnitude_spectrum, -num_peaks)[-num_peaks:]
+# Define frequency range of interest
+frequency_min = 0  # Minimum frequency in Hz
+frequency_max = 25000  # Maximum frequency in Hz
 
-print("Top 3 Frequency Peaks:")
+# Find indices of frequencies within the range of interest
+indices_of_interest = np.where((frequencies >= frequency_min) & (frequencies <= frequency_max))[0]
+
+# Find top peaks within the frequency range of interest
+num_peaks = 10
+peak_indices = np.argpartition(magnitude_spectrum[indices_of_interest], -num_peaks)[-num_peaks:]
+
+# Create a list to store peak information
+peak_info_list = []
+
+# Store peak information in the list
 for i in peak_indices:
-    print(f"{frequencies[i]:.2f} Hz   {magnitude_spectrum[i]:.2f}")
+    frequency = frequencies[indices_of_interest][i]
+    strength = magnitude_spectrum[indices_of_interest][i]
+    peak_info_list.append((frequency, strength))
+
+# Sort the peak information list by strength in descending order
+peak_info_list.sort(key=lambda x: x[1], reverse=True)
+
+print("Top Frequency Peaks:")
+for frequency, strength in peak_info_list:
+    print(f"{frequency:.2f} Hz   {strength:.2f}")
 
 # Plot the spectrum for the frequency range of interest
 plt.figure(figsize=(10, 6))
-plt.plot(frequencies, magnitude_spectrum)
+plt.plot(frequencies[indices_of_interest], magnitude_spectrum[indices_of_interest])
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Magnitude')
-plt.title('FFT Spectrum')
+plt.title(f'FFT Spectrum ({frequency_min} Hz - {frequency_max} Hz)')
 plt.grid()
 
 plt.show()

@@ -1461,3 +1461,191 @@ org.eclipse.core.runtime.CoreException: Setup exceptions
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:09:31.663
 !MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:27:42.996
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:44:41.776
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:47:47.320
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:51:19.385
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:52:13.364
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:53:19.102
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:56:08.125
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 09:58:05.683
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:00:36.099
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:01:41.725
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:04:07.949
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:15:37.567
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:22:32.583
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:24:15.082
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:25:47.953
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:27:07.828
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:28:31.419
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:29:26.886
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:30:18.704
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-10 10:37:09.745
+!MESSAGE Indexed 'OnBoardMics' (39 sources, 166 headers) in 2.36 sec: 18,526 declarations; 98,685 references; 1 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:40:48.417
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:43:47.402
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:44:46.205
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:45:49.504
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:46:35.301
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:50:53.323
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 10:52:47.626
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:34:46.250
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:36:44.222
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:38:35.040
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:40:01.592
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:41:10.228
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:44:05.206
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:44:18.651
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:45:11.664
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:49:36.966
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:50:19.195
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:51:19.577
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:51:59.519
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:52:34.872
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:53:01.401
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 12:55:05.568
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 13:03:53.689
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY org.eclipse.debug.ui 4 120 2023-08-10 13:06:59.591
+!MESSAGE Error logged from Debug UI: 
+!STACK 1
+org.eclipse.debug.core.DebugException: Breakpoint does not have an associated marker.
+	at org.eclipse.debug.core.model.Breakpoint.ensureMarker(Breakpoint.java:297)
+	at org.eclipse.cdt.debug.internal.core.breakpoints.CBreakpoint.getSourceHandle(CBreakpoint.java:154)
+	at org.eclipse.cdt.debug.core.CDIDebugModel.lineBreakpointExists(CDIDebugModel.java:1134)
+	at org.eclipse.cdt.debug.internal.ui.actions.breakpoints.ToggleBreakpointAdapter.findLineBreakpoint(ToggleBreakpointAdapter.java:44)
+	at org.eclipse.cdt.debug.ui.breakpoints.AbstractToggleBreakpointAdapter.updateLineBreakpoints(AbstractToggleBreakpointAdapter.java:347)
+	at org.eclipse.cdt.debug.ui.breakpoints.AbstractToggleBreakpointAdapter.updateBreakpoints(AbstractToggleBreakpointAdapter.java:311)
+	at org.eclipse.cdt.debug.ui.breakpoints.AbstractToggleBreakpointAdapter.toggleBreakpointsWithEvent(AbstractToggleBreakpointAdapter.java:117)
+	at org.eclipse.debug.ui.actions.ToggleBreakpointAction.doIt(ToggleBreakpointAction.java:105)
+	at org.eclipse.debug.ui.actions.ToggleBreakpointAction.runWithEvent(ToggleBreakpointAction.java:83)
+	at org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate.runWithEvent(RulerToggleBreakpointActionDelegate.java:116)
+	at org.eclipse.ui.internal.handlers.ActionDelegateHandlerProxy.execute(ActionDelegateHandlerProxy.java:281)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.ui.actions.ContributedAction.runWithEvent(ContributedAction.java:176)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$1.triggerAction(AbstractTextEditor.java:3025)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$1.mouseDoubleClick(AbstractTextEditor.java:3051)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:200)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4054)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3642)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SUBENTRY 1 org.eclipse.debug.core 4 5012 2023-08-10 13:06:59.591
+!MESSAGE Breakpoint does not have an associated marker.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 13:07:07.292
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 13:11:37.897
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2023-08-10 13:13:53.931
+!MESSAGE SWV configuration; base: 192000000; minDiv: 16; maxDiv: 65535; maxSWO: 12000000; limit: 12000000 => SWO: 8000000; CPU: 16000000; div: 2
