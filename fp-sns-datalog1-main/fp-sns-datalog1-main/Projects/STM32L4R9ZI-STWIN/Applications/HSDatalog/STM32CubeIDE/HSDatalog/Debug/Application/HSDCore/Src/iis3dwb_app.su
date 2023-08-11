@@ -1,0 +1,10 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:280:13:IIS3DWB_Int_Callback	8	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:75:6:IIS3DWB_Peripheral_Init	48	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:112:6:IIS3DWB_OS_Init	40	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:286:6:IIS3DWB_Set_State	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:291:6:IIS3DWB_Start	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:297:6:IIS3DWB_Stop	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:303:13:IIS3DWB_Data_Ready	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:135:13:IIS3DWB_Thread	56	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:313:9:IIS3DWB_Get_Id	0	static
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis3dwb_app.c:323:9:IIS3DWB_Create_Sensor	16	static

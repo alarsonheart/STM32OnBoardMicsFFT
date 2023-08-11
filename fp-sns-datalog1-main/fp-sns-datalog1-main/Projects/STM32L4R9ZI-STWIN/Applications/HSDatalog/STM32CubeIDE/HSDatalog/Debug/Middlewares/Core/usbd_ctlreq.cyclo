@@ -1,0 +1,6 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c:100:20:USBD_StdDevReq	56
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c:163:20:USBD_StdItfReq	7
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c:214:20:USBD_StdEPReq	26
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c:839:6:USBD_ParseSetupRequest	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c:868:6:USBD_CtlError	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c:885:6:USBD_GetString	6

@@ -1,0 +1,10 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:201:13:IIS2MDC_Int_Callback	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:71:6:IIS2MDC_Peripheral_Init	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:96:6:IIS2MDC_OS_Init	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:207:6:IIS2MDC_Set_State	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:212:6:IIS2MDC_Start	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:218:6:IIS2MDC_Stop	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:223:13:IIS2MDC_Data_Ready	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:113:13:IIS2MDC_Thread	9
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:233:9:IIS2MDC_Get_Id	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Projects/STM32L4R9ZI-STWIN/Applications/HSDatalog/HSDCore/Src/iis2mdc_app.c:243:9:IIS2MDC_Create_Sensor	3

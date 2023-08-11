@@ -1,0 +1,6 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Drivers/BSP/STWIN/STWIN_debug_pins.c:80:6:BSP_DEBUG_PIN_Init_All	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Drivers/BSP/STWIN/STWIN_debug_pins.c:110:6:BSP_DEBUG_PIN_Init	13
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Drivers/BSP/STWIN/STWIN_debug_pins.c:128:7:BSP_DEBUG_PIN_DeInit	13
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Drivers/BSP/STWIN/STWIN_debug_pins.c:134:6:BSP_DEBUG_PIN_On	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Drivers/BSP/STWIN/STWIN_debug_pins.c:139:6:BSP_DEBUG_PIN_Off	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Drivers/BSP/STWIN/STWIN_debug_pins.c:144:6:BSP_DEBUG_PIN_Toggle	1

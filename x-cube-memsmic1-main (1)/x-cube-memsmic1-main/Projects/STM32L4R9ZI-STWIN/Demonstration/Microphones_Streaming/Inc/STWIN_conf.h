@@ -36,8 +36,8 @@ extern "C" {
 /* Select the sampling frequencies for the microphones
    If the digital microphone is enabled then the max frequency is 48000Hz,
    otherwise is 192000Hz.  */
+//#define AUDIO_IN_SAMPLING_FREQUENCY 192000
 #define AUDIO_IN_SAMPLING_FREQUENCY 48000
-
 
 #define AUDIO_IN_CHANNELS     (ONBOARD_ANALOG_MIC+ONBOARD_DIGITAL_MIC)
 

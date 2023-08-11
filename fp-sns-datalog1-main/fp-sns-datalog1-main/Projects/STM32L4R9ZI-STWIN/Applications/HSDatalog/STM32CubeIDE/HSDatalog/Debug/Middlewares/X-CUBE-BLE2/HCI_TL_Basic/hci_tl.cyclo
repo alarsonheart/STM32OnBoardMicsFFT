@@ -1,0 +1,5 @@
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.c:132:6:hci_init	5
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.c:159:6:hci_register_io_bus	1
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.c:169:5:hci_send_req	22
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.c:309:6:hci_user_evt_proc	3
+C:/Users/angel/STM32CubeIDE/STWINK2/fp-sns-datalog1-main/fp-sns-datalog1-main/Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.c:327:9:hci_notify_asynch_evt	6

@@ -1,0 +1,10 @@
+12:03:44 **** Incremental Build of configuration Debug for project HSDatalog ****
+make -j16 all 
+arm-none-eabi-size   HSDatalog.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 184256	   2656	 573696	 760608	  b9b20	HSDatalog.elf
+Finished building: default.size.stdout
+ 
+
+12:03:44 Build Finished. 0 errors, 0 warnings. (took 502ms)
+

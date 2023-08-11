@@ -22,15 +22,34 @@
 /* Includes ------------------------------------------------------------------*/
 #include "audio_application.h"
 #include "arm_math.h"
+#include "stdio.h"
+#define FFT_SIZE 4096
+#define FFT_BUFFER_SIZE 4096
+#define BUFFER_SIZE ((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY / 1000) * N_MS_PER_INTERRUPT)
+#define NUM_PEAKS 10
+#define NUM_FREQUENCIES (FFT_SIZE / 2)
+#define BH_WINDOW_SIZE FFT_BUFFER_SIZE
 
-#define FFT_SIZE 64
-#define BUFFER_SIZE ((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY) / 1000) * N_MS_PER_INTERRUPT
+typedef struct {
+	float32_t bin_width;
+	float32_t strength;
+} FrequencyData;
+typedef struct {
+    uint32_t index;
+    float32_t frequency;
+    float32_t strength;
+} PeakInfo;
+PeakInfo peak_info_array[NUM_PEAKS];
+FrequencyData strength_buffer[NUM_FREQUENCIES];
+float32_t fft_frequency[FFT_SIZE / 2];
+uint32_t peak_indices[NUM_PEAKS];
+float32_t peak_frequencies[NUM_PEAKS];
 
-// Buffer to store the result of the FFT
-float32_t fftInput[FFT_SIZE]; // Buffer for the FFT input data
-float32_t fftOutput[FFT_SIZE];
-float32_t fftMagnitude[FFT_SIZE/2];
-extern USBD_HandleTypeDef fftOut; // Declaration of the external variable
+float32_t fftInput[FFT_BUFFER_SIZE];
+uint16_t fftBufferIndex = 0;
+float32_t fftOutput[FFT_BUFFER_SIZE];
+float32_t fftMagnitude[FFT_BUFFER_SIZE / 2];
+
 
 
 /** @addtogroup X_CUBE_MEMSMIC1_Applications
@@ -82,7 +101,7 @@ uint16_t PCM_Buffer[((AUDIO_IN_CHANNELS * AUDIO_IN_SAMPLING_FREQUENCY) / 1000)  
 void BSP_AUDIO_IN_HalfTransfer_CallBack(uint32_t Instance)
 {
   UNUSED(Instance);
-  AudioProcess();
+//  AudioProcess();
   BSP_LED_Off(LED1);
 }
 
@@ -106,30 +125,112 @@ void BSP_AUDIO_IN_TransferComplete_CallBack(uint32_t Instance)
   * @param  none
   * @retval None
   */
+void generate_bh_window(float32_t* window, uint32_t size)
+{
+    const float32_t a0 = 0.35875f;
+    const float32_t a1 = 0.48829f;
+    const float32_t a2 = 0.14128f;
+    const float32_t a3 = 0.01168f;
 
+    for (uint32_t i = 0; i < size; i++)
+    {
+        float32_t coef = (2.0f * PI * i) / (size - 1);
+        window[i] = a0 - a1 * arm_cos_f32(coef) + a2 * arm_cos_f32(2.0f * coef) - a3 * arm_cos_f32(3.0f * coef);
+    }
+}
+
+void Perform_FFT(void)
+{
+//    float32_t bh_window[FFT_BUFFER_SIZE];
+//
+//    // Generate the Blackman-Harris window
+//    generate_bh_window(bh_window, FFT_BUFFER_SIZE);
+//
+//    // Perform the FFT on the fftInput buffer with the Blackman-Harris window
+//    for (int i = 0; i < FFT_BUFFER_SIZE; i++)
+//    {
+//        fftInput[i] *= bh_window[i];
+//    }
+    // Perform the FFT on the fftInput buffer
+    arm_rfft_fast_instance_f32 fft;
+    arm_rfft_fast_init_f32(&fft, FFT_BUFFER_SIZE);
+    arm_rfft_fast_f32(&fft, fftInput, fftOutput, 0);
+
+    // Compute the magnitude spectrum (only the first half since it's symmetric)
+    arm_cmplx_mag_f32(fftOutput, fftMagnitude, FFT_BUFFER_SIZE / 2);
+
+    // Fill strength_buffer with frequency data and corresponding strengths
+    float32_t sampling_rate = 48000.0f;
+    float32_t bin_width = sampling_rate / FFT_BUFFER_SIZE;
+
+    for (int i = 0; i < FFT_BUFFER_SIZE / 2; i++)
+    {
+        strength_buffer[i].bin_width = i * bin_width;
+        strength_buffer[i].strength = fftMagnitude[i];
+    }
+
+    // Find the indices of the largest peaks
+    for (int i = 0; i < NUM_PEAKS; i++)
+        {
+            float32_t max_magnitude = -1.0f;
+            uint32_t max_index = 0;
+
+            for (int j = 0; j < FFT_BUFFER_SIZE / 2; j++)
+            {
+                if (strength_buffer[j].strength > max_magnitude)
+                {
+                    int found = 0;
+                    for (int k = 0; k < i; k++)
+                    {
+                        if (peak_indices[k] == j)
+                        {
+                            found = 1;
+                            break;
+                        }
+                    }
+
+                    if (!found)
+                    {
+                        max_magnitude = strength_buffer[j].strength;
+                        max_index = j;
+                    }
+                }
+            }
+
+            peak_indices[i] = max_index;
+            peak_frequencies[i] = strength_buffer[max_index].bin_width;
+            // Store the peak information in the peak_info_array
+            peak_info_array[i].index = peak_indices[i];
+            peak_info_array[i].frequency = peak_frequencies[i];
+            peak_info_array[i].strength = max_magnitude;
+        }
+//    HAL_Delay(1000);
+    }
 void AudioProcess(void)
 {
+    // Convert 16-bit PCM data to float and store in fftInput buffer
+    for (int i = 0; i < BUFFER_SIZE / 2; i++)
+    {
+        if (fftBufferIndex < FFT_BUFFER_SIZE)
+        {
+            float32_t left_sample = (float32_t)PCM_Buffer[i * 2] * 1.0f;
+            float32_t right_sample = (float32_t)PCM_Buffer[i * 2 + 1] * 1.0f;
+            fftInput[fftBufferIndex] = left_sample + right_sample; // Sum left and right samples
+            fftBufferIndex++;
+        }
+    }
 
-	// Copy the required samples from PCM_Buffer to fftInput (size 64)
-	  for (int i = 0; i < FFT_SIZE; i++) {
-	    if (i < 64) {
-	      fftInput[i] = (float32_t)PCM_Buffer[i]; // Convert the PCM_Buffer data to float for the FFT
-	    } else {
-	      fftInput[i] = 0.0f; // Zero-pad the remaining elements of fftInput
-	    }
-	  }
+    // If the FFT buffer is filled, perform the FFT
+    if (fftBufferIndex >= FFT_BUFFER_SIZE)
+    {
+        Perform_FFT();
+        fftBufferIndex = 0; // Reset the index for the next iteration
+    }
 
-	  // Perform the FFT on the fftInput buffer
-	  arm_rfft_fast_instance_f32 fft;
-	  arm_rfft_fast_init_f32(&fft, FFT_SIZE);
-	  arm_rfft_fast_f32(&fft, fftInput, fftOutput, 0);
-	  arm_cmplx_mag_f32(fftOutput, fftMagnitude, FFT_SIZE / 2);
-
-	  USBD_LL_Transmit(&fftOut, 0x80U, (uint8_t*)fftOutput, 64);
-	  // Send the processed FFT data to USB
-//	  Send_Audio_to_USB((int16_t *)fftOutput, FFT_SIZE); //I do not know why this messes up my recording in Audacity
-  Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000)*AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
+    // Send the processed FFT data to USB (you can remove this if not needed)
+     Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY / 1000) * AUDIO_IN_CHANNELS * N_MS_PER_INTERRUPT);
 }
+
 
 /**
   * @brief  User function that is called when 1 ms of PDM data is available.
@@ -190,5 +291,94 @@ void Error_Handler(void)
 /**
   * @}
   */
+/**
+void generate_bh_window(float32_t* window, uint32_t size)
+{
+    const float32_t a0 = 0.35875f;
+    const float32_t a1 = 0.48829f;
+    const float32_t a2 = 0.14128f;
+    const float32_t a3 = 0.01168f;
 
+    for (uint32_t i = 0; i < size; i++)
+    {
+        float32_t coef = (2.0f * PI * i) / (size - 1);
+        window[i] = a0 - a1 * arm_cos_f32(coef) + a2 * arm_cos_f32(2.0f * coef) - a3 * arm_cos_f32(3.0f * coef);
+    }
+}
 
+float32_t interpolate_peak(float32_t left, float32_t center, float32_t right) {
+    float32_t delta = 0.5 * (left - right) / (left - 2 * center + right);
+    return delta;
+}
+void Perform_FFT(void) {
+    float32_t bh_window[FFT_BUFFER_SIZE];
+
+    // Generate the Blackman-Harris window
+    generate_bh_window(bh_window, FFT_BUFFER_SIZE);
+
+    // Apply the Blackman-Harris window to the fftInput buffer
+    for (int i = 0; i < FFT_BUFFER_SIZE; i++) {
+        fftInput[i] *= bh_window[i];
+    }
+
+    // Perform the FFT on the fftInput buffer
+    arm_rfft_fast_instance_f32 fft;
+    arm_rfft_fast_init_f32(&fft, FFT_BUFFER_SIZE);
+    arm_rfft_fast_f32(&fft, fftInput, fftOutput, 0);
+
+    // Compute the magnitude spectrum (only the first half since it's symmetric)
+    arm_cmplx_mag_f32(fftOutput, fftMagnitude, FFT_BUFFER_SIZE / 2);
+
+    // Fill strength_buffer with frequency data and corresponding strengths
+    float32_t sampling_rate = 48000.0f;
+    float32_t bin_width = sampling_rate / FFT_BUFFER_SIZE;
+
+    for (int i = 0; i < FFT_BUFFER_SIZE / 2; i++) {
+        strength_buffer[i].bin_width = i * bin_width;
+        strength_buffer[i].strength = fftMagnitude[i];
+    }
+
+    // Find the indices of the largest peaks
+    for (int i = 0; i < NUM_PEAKS; i++) {
+        float32_t max_magnitude = -1.0f;
+        uint32_t max_index = 0;
+
+        for (int j = 0; j < FFT_BUFFER_SIZE / 2; j++) {
+            if (strength_buffer[j].strength > max_magnitude) {
+                int found = 0;
+                for (int k = 0; k < i; k++) {
+                    if (peak_indices[k] == j) {
+                        found = 1;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    max_magnitude = strength_buffer[j].strength;
+                    max_index = j;
+                }
+            }
+        }
+
+        peak_indices[i] = max_index;
+        peak_frequencies[i] = strength_buffer[max_index].bin_width;
+
+        // Perform peak interpolation
+        if (peak_indices[i] > 0 && peak_indices[i] < FFT_BUFFER_SIZE / 2 - 1) {
+            float32_t left_magnitude = fftMagnitude[peak_indices[i] - 1];
+            float32_t center_magnitude = fftMagnitude[peak_indices[i]];
+            float32_t right_magnitude = fftMagnitude[peak_indices[i] + 1];
+
+            float32_t interpolated_index = peak_indices[i] + interpolate_peak(left_magnitude, center_magnitude, right_magnitude);
+
+            peak_frequencies[i] = interpolated_index * bin_width;
+        }
+
+        // Store the peak information in the peak_info_array
+        peak_info_array[i].index = peak_indices[i];
+        peak_info_array[i].frequency = peak_frequencies[i];
+        peak_info_array[i].strength = max_magnitude;
+    }
+    // ... (The rest of your existing code)
+}
+**/

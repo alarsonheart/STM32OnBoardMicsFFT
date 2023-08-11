@@ -8,6 +8,9 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="AUDIO"/>
+			<item value="__HAL_RCC_PWR_CLK_ENABLE"/>
+			<item value="main"/>
 			<item value="PCD"/>
 			<item value="a"/>
 			<item value="USBD"/>
@@ -24,5 +27,12 @@
 			<item value="usbd_conf"/>
 			<item value="usb"/>
 		</list>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="askReindex.detail" value="0"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item key="size.width" value="1016"/>
+		<item key="size.height" value="223"/>
 	</section>
 </section>

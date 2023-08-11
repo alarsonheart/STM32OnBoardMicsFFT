@@ -31,7 +31,7 @@ audio_file = '1kHzPCM.wav'
 with wave.open(audio_file, 'rb') as wav_file:
     # Get the parameters of the audio file
     num_channels = wav_file.getnchannels()
-    sample_width = wav_file.getsampwidth()
+    sample_width = 8 #wav_file.getsampwidth()
     frame_rate = wav_file.getframerate()
     num_frames = wav_file.getnframes()
 
